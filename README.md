@@ -40,6 +40,12 @@ var cities = require('cities');
 cities.gps_lookup(lat, lng);
 ```
 
+#### Lookup by [Geohash](http://en.wikipedia.org/wiki/Geohash)
+
+```
+cities.geohash_lookup(geohash);
+```
+
 #### Lookup by zipcode
 
 ```
