@@ -5,6 +5,7 @@
   "author": "Steven Lu <slu@me.com>",
   "dependencies": {
     "haversine": "^1.0.0",
+    "latlon-geohash": "^1.1.0",
     "lodash": "^3.5.0"
   },
   "devDependencies": {
@@ -20,5 +21,12 @@
     "start": "server.js",
     "test": "mocha"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Scott Ferguson",
+      "email": "scott@fergusoniclabs.net",
+      "url": "https://fergusoniclabs.net"
+    }
+  ]
 }

@@ -8,6 +8,13 @@ describe('gps_lookup()', function() {
   });
 });
 
+describe('geohash_lookup()', function() {
+  it('should give me 07946 based on dr5p2k', function() {
+    var hometown = cities.geohash_lookup('dr5p2k');
+    assert.equal(07946, hometown.zipcode);
+  });
+});
+
 describe('zip_lookup()', function() {
   it('should give me 07946 based on zip code', function() {
     var hometown = cities.zip_lookup(07946);

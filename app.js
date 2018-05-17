@@ -2,6 +2,7 @@ var fs = require('fs');
 var locations = require('./locations');
 var haversine = require('haversine');
 var _ = require('lodash');
+var Geohash = require('latlon-geohash');
 
 var find = exports.find = _.partial(_.find, locations);
 var filter = exports.filter = _.partial(_.filter, locations);
@@ -31,6 +32,11 @@ exports.gps_lookup = exports.gpsLookup = function(latitude, longitude) {
 
   minLocation.distance = minDistance;
   return minLocation;
+};
+
+exports.geohash_lookup = exports.geoHashLookup = function(geohash) {
+  var location = Geohash.decode(geohash);
+  return exports.gps_lookup(location.lat, location.lon);
 };
 
 exports.findByState = function(state) {
